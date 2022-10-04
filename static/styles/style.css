@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background: #1A1A40;
+}
+
+.inputBox {
+    position: relative;
+    width: 500px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #1A1A40;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #FA58B6;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.inputBox input:valid ~ span, 
+.inputBox input:focus ~ span {
+    color: #FA58B6;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #1A1A40;
+    border-left: 1px solid #FA58B6;
+    border-right: 1px solid #FA58B6;
+}
+
+.submitButton {
+    background-color: #FA58B6;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    transform: translateX(220px) translateY(20px);
+    color: #1A1A40;
+}
+
+.submitButton:hover {
+    padding: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+}
